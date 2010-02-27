@@ -1,6 +1,6 @@
 Name:           sugar-logos
 Version:        2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Boot splash imagery for Sugar on a Stick
 
 Group:          System Environment/Base
@@ -37,6 +37,26 @@ done
 rm -rf $RPM_BUILD_ROOT
 
 
+%post
+export LIB=%{_lib}
+if [ $1 -eq 1 ]; then
+    %{_sbindir}/plymouth-set-default-theme sugar
+else
+    if [ "$(%{_sbindir}/plymouth-set-default-theme)" == "solar" ]; then
+        %{_sbindir}/plymouth-set-default-theme sugar
+    fi
+fi
+
+
+%postun
+export LIB=%{_lib}
+if [ $1 -eq 0 ]; then
+    if [ "$(%{_sbindir}/plymouth-set-default-theme)" == "sugar" ]; then
+        %{_sbindir}/plymouth-set-default-theme --reset
+    fi
+fi
+
+
 %files
 %defattr(-,root,root,-)
 %doc COPYING
@@ -44,5 +64,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sat Feb 27 2010 Sebastian Dziallas <sebastian@when.com> 2-2
+- activate the new theme too
+
 * Wed Feb 17 2010 Sebastian Dziallas <sebastian@when.com> 2-1
 - initial packaging
