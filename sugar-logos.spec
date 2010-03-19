@@ -1,6 +1,6 @@
 Name:           sugar-logos
 Version:        2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Boot splash imagery for Sugar on a Stick
 
 Group:          System Environment/Base
@@ -59,13 +59,17 @@ fi
 
 %files
 %defattr(-,root,root,-)
-%doc COPYING
+%doc COPYING AUTHORS
 %{_datadir}/plymouth/themes/sugar/
 
 
 %changelog
+* Fri Mar 19 2010 Sebastian Dziallas <sebastian@when.com> 2-3
+- make sure to have correct config file naming
+
 * Sat Feb 27 2010 Sebastian Dziallas <sebastian@when.com> 2-2
 - activate the new theme too
+- add authors file
 
 * Wed Feb 17 2010 Sebastian Dziallas <sebastian@when.com> 2-1
 - initial packaging
