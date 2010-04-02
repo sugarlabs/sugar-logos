@@ -1,6 +1,6 @@
 Name:           sugar-logos
-Version:        2
-Release:        3%{?dist}
+Version:        3
+Release:        1%{?dist}
 Summary:        Boot splash imagery for Sugar on a Stick
 
 Group:          System Environment/Base
@@ -64,6 +64,9 @@ fi
 
 
 %changelog
+* Fri Apr  2 2010 Peter Robinson <pbrobinson@gmail.com> 3-1
+- New upstream release for Mirabelle
+
 * Fri Mar 19 2010 Sebastian Dziallas <sebastian@when.com> 2-3
 - make sure to have correct config file naming
 
