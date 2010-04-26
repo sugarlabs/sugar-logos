@@ -1,6 +1,6 @@
 Name:           sugar-logos
 Version:        3
-Release:        1%{?dist}
+Release:        3%{?dist}
 Summary:        Boot splash imagery for Sugar on a Stick
 
 Group:          System Environment/Base
@@ -10,6 +10,7 @@ Source0:        http://download.sugarlabs.org/sources/external/sugar-logos/%{nam
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:      noarch
+BuildRequires:  plymouth-theme-charge
 Requires:       plymouth
 Requires:       plymouth-plugin-two-step
 
@@ -32,6 +33,7 @@ for i in src/* ; do
     install -p -m 644 $i $RPM_BUILD_ROOT%{_datadir}/plymouth/themes/sugar/
 done
 
+cp %{_datadir}/plymouth/themes/charge/{box,bullet,entry,lock}.png $RPM_BUILD_ROOT%{_datadir}/plymouth/themes/sugar
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -64,6 +66,12 @@ fi
 
 
 %changelog
+* Mon Apr 26 2010 Sebastian Dziallas <sebastian@when.com> 3-3
+- include correct files for new release
+
+* Mon Apr 26 2010 Sebastian Dziallas <sebastian@when.com> 3-2
+- make sure to pull complete theme in
+
 * Fri Apr  2 2010 Peter Robinson <pbrobinson@gmail.com> 3-1
 - New upstream release for Mirabelle
 
