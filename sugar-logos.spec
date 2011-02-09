@@ -1,6 +1,6 @@
 Name:           sugar-logos
 Version:        3
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Boot splash imagery for Sugar on a Stick
 
 Group:          System Environment/Base
@@ -66,6 +66,9 @@ fi
 
 
 %changelog
+* Wed Feb 09 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 3-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
+
 * Mon Apr 26 2010 Sebastian Dziallas <sebastian@when.com> 3-3
 - include correct files for new release
 
