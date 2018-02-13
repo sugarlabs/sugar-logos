@@ -7,7 +7,6 @@ Group:          System Environment/Base
 License:        GPLv2+
 URL:            http://git.sugarlabs.org/projects/sugar-logos
 Source0:        http://download.sugarlabs.org/sources/external/sugar-logos/%{name}-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:      noarch
 BuildRequires:  plymouth-theme-charge
