@@ -34,9 +34,6 @@ done
 
 cp %{_datadir}/plymouth/themes/charge/{box,bullet,entry,lock}.png $RPM_BUILD_ROOT%{_datadir}/plymouth/themes/sugar
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 
 %post
 export LIB=%{_lib}
