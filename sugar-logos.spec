@@ -56,7 +56,6 @@ fi
 
 
 %files
-%defattr(-,root,root,-)
 %doc COPYING AUTHORS
 %{_datadir}/plymouth/themes/sugar/
 
