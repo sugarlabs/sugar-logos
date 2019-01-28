@@ -3,7 +3,6 @@ Version:        3
 Release:        15%{?dist}
 Summary:        Boot splash imagery for Sugar on a Stick
 
-Group:          System Environment/Base
 License:        GPLv2+
 URL:            http://git.sugarlabs.org/projects/sugar-logos
 Source0:        http://download.sugarlabs.org/sources/external/sugar-logos/%{name}-%{version}.tar.gz
