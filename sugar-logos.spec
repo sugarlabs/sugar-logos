@@ -19,13 +19,9 @@ A boot splash screen for Sugar using Plymouth.
 %prep
 %setup -q
 
-
 %build
 
-
 %install
-rm -rf $RPM_BUILD_ROOT
-
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/plymouth/themes/sugar/
 for i in src/* ; do
     install -p -m 644 $i $RPM_BUILD_ROOT%{_datadir}/plymouth/themes/sugar/
@@ -55,7 +51,8 @@ fi
 
 
 %files
-%doc COPYING AUTHORS
+%license COPYING
+%doc AUTHORS
 %{_datadir}/plymouth/themes/sugar/
 
 
