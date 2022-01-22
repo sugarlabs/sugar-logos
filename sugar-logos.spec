@@ -1,6 +1,6 @@
 Name:           sugar-logos
 Version:        3
-Release:        21%{?dist}
+Release:        22%{?dist}
 Summary:        Boot splash imagery for Sugar on a Stick
 
 License:        GPLv2+
@@ -57,6 +57,9 @@ fi
 
 
 %changelog
+* Sat Jan 22 2022 Fedora Release Engineering <releng@fedoraproject.org> - 3-22
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
+
 * Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 3-21
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
